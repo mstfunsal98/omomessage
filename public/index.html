@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chat { margin: 20px auto; max-width: 600px; }
+        #messages { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; }
+        #userList { margin-bottom: 10px; }
+        #messageForm { display: flex; }
+        #messageInput { flex: 1; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="chat">
+        <div id="userList"></div>
+        <div id="messages"></div>
+        <form id="messageForm">
+            <input id="messageInput" type="text" placeholder="Enter your message..." autocomplete="off" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
